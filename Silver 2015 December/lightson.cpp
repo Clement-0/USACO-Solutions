@@ -42,15 +42,6 @@ int main() {
         fin >> a >> b; --a; --b;
         switches[x][y].push_back(mp(a, b));
     }
-
-    // for (int i = 0; i<N; ++i) {
-    //     for (int j = 0; j<N; ++j) {
-    //         if (switches[i][j].empty()) cout << "    | ";
-    //         else cout << (switches[i][j])[0].f << " " << (switches[i][j])[0].s << " | ";
-    //     }
-    //     cout << endl;
-    // }
-
     
     for (int i = 0; i<N*40; ++i) {
         for (int j = 0; j<N; ++j)
@@ -58,18 +49,6 @@ int main() {
                 visited[j][k] = 0;
         bfs();
     }
-
-    // for (int i = 0; i<N; ++i) {
-    //     for (int j = 0; j<N; ++j)
-    //         cout << visited[i][j] << " ";
-    //     cout << endl;
-    // }
-    // cout << endl;
-    // for (int i = 0; i<N; ++i) {
-    //     for (int j = 0; j<N; ++j)
-    //         cout << lit[i][j] << " ";
-    //     cout << endl;
-    // }
 
     int ans = 0;
     for (int i = 0; i<N; ++i)
