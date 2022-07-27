@@ -12,7 +12,6 @@ int cnt = 0;
 void dfs(int v) {
     if (vis[v]) return;
     vis[v] = 1;
-    // cout << v << endl;
     ++cnt;
     for (int c: adj[v])
         dfs(c);
@@ -27,8 +26,7 @@ int main() {
         fin >> cows[i].i >> cows[i].j >> cows[i].p;
     for (int i=0; i<N; ++i) {
         for (int j=0; j<N; ++j) if (i!=j) {
-            if ((cows[j].i-cows[i].i)*(cows[j].i-cows[i].i)+(cows[j].j-cows[i].j)*(cows[j].j-cows[i].j)
-             <= cows[i].p*cows[i].p)
+            if ((cows[j].i-cows[i].i)*(cows[j].i-cows[i].i)+(cows[j].j-cows[i].j)*(cows[j].j-cows[i].j) <= cows[i].p*cows[i].p)
                 adj[i].push_back(j);
         }
     }
